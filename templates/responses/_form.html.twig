@@ -1,0 +1,16 @@
+{% extends 'backOffice.html.twig' %}
+
+{% block content %}
+
+<div class="col-sm-12 col-xl-6 mt-4">
+    <div class="bg-light rounded p-4">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="hidden" name="idsup" value="{{ form.vars.value.idsup }}">
+        <input type="hidden" name="emailsup" value="{{ form.vars.value.emailsup }}">
+        <button type="submit" class="btn btn-primary mt-3" style="color: #fff; background-color: #28a745; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s ease;">{{ button_label|default('Send') }}</button>
+        {{ form_end(form) }}
+    </div>
+</div>
+
+{% endblock %}
